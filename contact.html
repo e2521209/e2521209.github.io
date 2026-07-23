@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aoi FUJIKI">
+    <meta name="keywords" content="R2について,活動紹介,チーム紹介,入会希望">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>ダブルダッチR2 入部希望フォーム</title>
+</head>
+<body>
+
+    <header>
+        <h1>入部・体験希望フォーム</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">ホームのページへ</a></li>
+                <li><a href="activity.html">活動紹介のページへ</a></li>
+                <li><a href="team.html">チーム紹介のページへ</a></li>
+                <li><a href="contact.html">入部希望のページへ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>お名前を入力してください</h2>
+            <div style="margin-bottom: 20px;">
+                <label for="lastname">姓：</label>
+                <input type="text" id="lastname" placeholder="山田">
+                
+                <label for="firstname">名：</label>
+                <input type="text" id="firstname" placeholder="太郎">
+                
+                <button id="send-data">確認画面に反映する</button>
+            </div>
+        </section>
+
+        <section style="border-top: 1px solid #ccc; padding-top: 20px;">
+            <h2>入力内容の確認</h2>
+            <p>ようこそ！ダブルダッチ部R2へ！</p>
+            <p>お名前： <span id="display-surname">ーー</span> <span id="display-firstname">ーー</span> さん</p>
+        </section>
+
+        <p><a href="#">ページの先頭へ戻る</a></p>
+    </main>
+
+    <footer>
+        Copyright &copy; FUJI, All Rights Reserved.
+    </footer>
+
+    <script>
+        document.getElementById("send-data").onclick = function () {
+            // フォームの値を取得
+            const surname = document.getElementById("lastname").value;
+            const firstname = document.getElementById("firstname").value;
+
+            // 取得した値でHTMLを変更
+            document.getElementById("display-surname").innerText = surname;
+            document.getElementById("display-firstname").innerText = firstname;
+        }
+    </script>
+</body>
+</html>
