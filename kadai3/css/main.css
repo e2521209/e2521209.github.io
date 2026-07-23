@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+/* サイト全体の設定 */
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+                 "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8;
+    color: #444444;
+    background-color: #fcf8f2;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー*/
+
+header {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #1e3a5f;
+    margin-bottom: 20px;
+}
+
+/* ナビゲーションメニュー */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #5d4037;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(93,64,55,0.08);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e67e22;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* メイン*/
+
+main {
+    margin: 20px auto 40px auto;
+}
+
+/* index.htmlだけで使うレイアウト */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 7fr;
+    gap: 30px;
+    max-width: 1100px;
+}
+
+.box-left {
+    grid-column: 1 / 2;
+}
+
+.box-right {
+    grid-column: 2 / 3;
+}
+
+.box-full {
+    grid-column: 1 / -1;
+}
+
+/* 白いボックス */
+
+section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 25px;
+    height: fit-content;
+}
+
+/* 横並びでは下余白をなくす */
+
+.grid-container section {
+    margin-bottom: 0;
+}
+
+/* 見出し・文章*/
+
+h2 {
+    color: #e67e22;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-left: 5px solid #d35400;
+    padding-left: 12px;
+}
+
+h3 {
+    color: #e67e22;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* ページの先頭へ戻る */
+
+main > p {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 10px;
+}
+
+main > p a {
+    color: #888888;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+main > p a:hover {
+    text-decoration: underline;
+}
+
+/* フッター*/
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #777777;
+    font-size: 13px;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* テーブル*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+caption {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e67e22;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 8px;
+    border: 1px solid #dcdde1;
+}
+
+table td {
+    padding: 12px 8px;
+    border: 1px solid #ede0d4;
+    background-color: #ffffff;
+    color: #4b6584;
+}
+
+table td[rowspan] {
+    background-color: #f7f0e8;
+    color: #a5b1c2;
+    font-size: 14px;
+}
+
+/*  チーム紹介ページ */
+
+/* 画像 */
+
+.team-image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.team-card {
+    background-color: #fcfdfe;
+    border: 1px solid #ede0d4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.team-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 15px;
+}
+
+.team-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* 動画 */
+
+.team-video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.video-card {
+    background-color: #fcfdfe;
+    border: 1px solid #ede0d4;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.video-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.video-card p {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 12px;
+}
+
+.video-card video {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background-color: #000;
+}
